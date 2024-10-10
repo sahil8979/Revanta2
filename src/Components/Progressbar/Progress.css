@@ -3,8 +3,13 @@
     position: fixed;
     top: 60px;
     left: 0;
-    height: 5.5px;
+    height: 5.8px;
     background-color: #32CD32; /* Set your preferred color here */
     z-index: 1000; /* Ensures it's on top of other content */
     transition: width 0.25s ease-out; /* Smooth transition as the scroll bar moves */
+}
+@media (max-width: 900px) {
+    .progress-bar{
+        top: 55px;
+    }
 }
