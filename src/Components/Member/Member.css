@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+   
+}
+.background{
+    background-color:  #25213420;
+}
+  
+/* Heading text and description */
+.heading-text {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+
+.first-text {
+    margin-top: -30px;
+    color: black;
+    margin-bottom: -5px;
+    
+}
+p{
+    font-weight: bold;
+    text-shadow: #0077b5;
+    font-size:18px ;
+}
+#piyush{
+    height: fit-content;
+}
+  
+/* Full-width line after the quote */
+.quote-line-full {
+    width: 80%;
+    margin: 10px 0;
+    border: none;
+    border-top: 2px solid #32CD32;
+    background-color: white;
+}
+  
+/* Year Heading */
+.year-heading {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2em;
+    color: #000f38;
+}
+  
+/* Horizontal line under year heading */
+.year-line {
+    width: 15%;
+    margin: 10px auto;
+    border: none;
+    border-top: 3px solid #32CD32;
+}
+  
+/* Cards container */
+.member-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+  
+/* Individual member card */
+.member-card {
+    background-color:  #252134;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    box-shadow: 0px 4px 8px #32CD3230;
+}
+  
+.member-card:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px 2px #32CD32;
+}
+  
+/* Profile image container */
+.image-container {
+    position: relative;
+}
+  
+/* Profile image styling */
+.profile-img {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: -10px;
+    border-radius: 10px;
+}
+  
+/* Social icons (LinkedIn, Instagram) below the image */
+.social-icons {
+    position: absolute;
+    bottom: 5px; /* Adjusted to make sure it stays within the image container */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    width: 70px;
+    background: #1c1c1c;
+    
+    justify-content: center;
+}
+  
+.social-icons a {
+    color: white;
+    font-size: 25px; /* Slightly bigger for better visibility */
+    transition: color 0.3s;
+    
+}
+.domain{
+    font-size: 1rem;
+    font-weight: 300;
+}
+  
+.social-icons a:hover {
+    color: #32CD32; /* LinkedIn blue or change to custom color */
+}
+  
+/* Role text styling */
+.member-card h3 {
+    margin-top: 35px;
+    font-size: 1.4em;
+}
+
+.member-card p {
+    font-weight: 300;
+    margin-top: 5px;
+}
+@media (max-width: 1000px){
+    .year-line{
+        width: 42%;
+    }
+    p{
+        font-size:12px ;
+        text-align: center;
+    }
+    .quote-line-full{
+        width: 95%;
+    }
+    .first-text{
+        margin-bottom: -5px;
+    }
+}

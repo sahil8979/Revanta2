@@ -1,0 +1,243 @@
+/* src/Hero.css */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.hero-container {
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.hero {
+    display: flex;
+    width: 100%; /* Adjust based on the number of images (3 images here) */
+    height: 100%;
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+}
+
+.hero-slide {
+    width: 100vw; /* Each slide takes up 100% of the viewport width */
+    height: 100vh;
+    flex: 0 0 100%; /* Ensures slides do not shrink or grow */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent image repetition */
+    position: relative; /* Allows gradient to be positioned correctly */
+}
+
+.hero-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+.hero-slide.image1 {
+    background-image: url('../../assets/hero1.jpg');
+}
+
+.hero-slide.image2 {
+    background-image: url('../../assets/hero2.jpg');
+}
+
+.hero-slide.image3 {
+    background-image: url('../../assets/hero3.jpg');
+}
+
+.overlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    z-index: 10; /* Ensures text is above the images and gradient */
+}
+
+.overlay h1 {
+    font-size: 6rem; /* Adjust font size as needed */
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-family: "Jersey 25", sans-serif;
+    letter-spacing: 5px;
+    text-shadow: 6px 6px 10px black;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: yellow; /* Highlight color for active dot */
+}
+
+.btns {
+    position: absolute;
+    bottom: 150px; /* Adjusted to ensure it is positioned above the bottom edge */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFF;
+    font-weight: bold;
+    color: #212121;
+    font-family: "Poppins", sans-serif;
+    padding: 14px 25px;
+    font-size: 13px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensure it is above other content */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.btns:hover {
+    transform: translateX(-50%) scale(1.1); /* Scale up the button on hover while maintaining its position */
+    color: white;
+    background-color: #212121;
+    border: 2px solid white;
+}
+.text{
+    height: 100%;
+    width: 100%;
+}
+
+/* For screens 1200px and below */
+@media (max-width: 1200px) {
+    .hero-container {
+        width: 95vw;
+        height: 75vh;
+    }
+
+    .overlay h1 {
+        font-size: 5rem;
+    }
+
+    .btns {
+        bottom: 130px;
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+}
+
+/* For screens 1000px and below */
+@media (max-width: 1000px) {
+    .hero-container {
+        width: 100vw;
+        height: auto; /* Adjust height to auto */
+        aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    }
+
+    .overlay h1 {
+        font-size: 4.5rem;
+    }
+
+    .btns {
+        bottom: 100px;
+        padding: 10px 18px;
+        font-size: 11px;
+    }
+
+    .hero-slide {
+        width: 100vw; /* Each slide takes up 100% of the viewport width */
+        height: auto; /* Adjust height to auto */
+        background-size: contain; /* Ensure the entire image is visible */
+        background-position: center;
+        background-repeat: no-repeat; /* Prevent image repetition */
+    }
+}
+
+/* For screens 900px and below */
+@media (max-width: 900px) {
+    .hero-container {
+        width: 100vw;
+        border-radius: 0px;
+        height: auto; /* Adjust height to auto */
+        aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+        
+    }
+
+    .overlay h1 {
+        font-size: 4rem;
+    }
+
+    .btns {
+        bottom: 80px;
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+
+    .hero-slide {
+        width: 100vw; /* Each slide takes up 100% of the viewport width */
+        height: auto; /* Adjust height to auto */
+        background-size: contain; /* Ensure the entire image is visible */
+        background-position: center;
+        background-repeat: no-repeat; /* Prevent image repetition */
+    }
+}
+
+/* For screens 600px and below */
+@media (max-width: 600px) {
+    .overlay h1 {
+        font-size: 3rem;
+    }
+
+    .btns {
+        bottom: 70px;
+        padding: 6px 14px;
+        font-size: 9px;
+    }
+
+}
+
+/* For screens 550px and below */
+@media (max-width: 550px) {
+    .overlay {
+        top: 35%; /* Adjust top position */
+    }
+      .hero-container{
+        border-radius: 0px;
+      }
+    .overlay h1 {
+        font-size: 2.5rem; /* Adjust font size */
+        margin-bottom: 10px; /* Add margin to maintain gap */
+    }
+
+    .btns {
+        bottom: 50px;
+        padding: 5px 12px;
+        font-size: 8px;
+    }
+}

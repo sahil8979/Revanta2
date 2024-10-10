@@ -1,0 +1,358 @@
+
+.footer {
+    background-color: #252525;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative; /* Added for positioning child elements */
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sectionWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15rem;
+    width: 100%;
+  }
+  
+  .section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .teamHeading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .revanta {
+    color: #32CD32; /* Accent color */
+  }
+  
+  .sectionHeading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+    text-transform: uppercase;
+    
+  }
+  
+  .linksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .linksList li {
+    margin: 5px 0;
+  }
+  
+  .linksList a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.5s, transform 0.3s ease; /* Fixed typo in 'transform' */
+    font-size: 13px;
+  }
+  
+  .linksList a:hover {
+    color: white;
+    font-weight: bold;
+    transform: scale(1.5);
+    font-size: 16px;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .socialIcon {
+    background-color: #32CD32;
+    padding: 10px;
+    margin-top: 10;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .socialIcon:hover {
+    background-color: #2E8B2D;
+  }
+  
+  .contactSection {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .contactItem  a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+   
+  .icon {
+    font-size: 1.2rem;
+    color: #32CD32;
+  }
+  
+  .footerBottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    position: relative; /* Added for positioning child elements */
+  }
+  
+  .footerBottom #rights {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .footerBottom .designby {
+    position: absolute; /* Absolute positioning */
+    left: 20px; /* Space from the left */
+    font-size: 10px;
+    color: white;
+  }
+  .design {
+    font-size: 13px;
+  }
+  
+  .section-text {
+    font-weight: 350;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+  }
+  
+  .designby a {
+    color: #2E8B2D;
+    text-decoration: none;
+  }
+  
+  .designby a:hover {
+    color: #32CD32;
+    text-decoration: underline;
+  }
+  #nitlogo{
+    height: 10em;
+    width: 10em;
+    
+  }
+  .nit{
+   left: 0;
+   top: 0;
+   
+  }
+
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .footerContent {
+      padding: 20px;
+    }
+    
+    .teamHeading {
+      font-size: 1.8rem; /* Slightly reduce font size */
+    }
+    
+    .sectionHeading {
+      font-size: 1.1rem; /* Reduce font size */
+    }
+  
+    .sectionWrapper {
+      flex-direction: row; /* Keep layout similar to desktop */
+      justify-content: space-between; /* Maintain space between sections */
+      gap: 20px;
+    }
+  
+    .section {
+      min-width: 25%; /* Reduce section width to fit the layout */
+      margin-bottom: 20px; /* Add some margin between sections */
+    }
+  
+    .socialIcon {
+      font-size: 1.4rem; /* Slightly reduce icon size */
+      padding: 8px;
+    }
+  
+    .footerBottom {
+      font-size: 0.85rem; /* Reduce the font size in footer */
+    }
+  }
+  
+  /* For screens up to 992px */
+  @media (max-width: 992px) {
+    .teamHeading {
+      font-size: 1.6rem; /* Reduce font size further */
+    }
+  
+    .sectionHeading {
+      font-size: 1rem; /* Further reduce heading font size */
+    }
+  
+    .sectionWrapper {
+      flex-direction: row; /* Maintain row layout */
+      flex-wrap: wrap; /* Allow wrapping */
+      justify-content: space-between; /* Space out the sections */
+      gap: 20px;
+    }
+  
+    .section {
+      flex: 1;
+      min-width: 15%; /* Adjust the section width */
+      margin-bottom: 20px;
+    }
+  
+    .socialIcon {
+      font-size: 1.3rem; /* Adjust icon size */
+      padding: 8px;
+    }
+  
+    .socialIcons {
+      gap: 15px; /* Keep space between social icons */
+    }
+  
+    .contactSection {
+      flex-direction: row; /* Maintain row layout */
+      justify-content: space-around; /* Keep contact items spaced */
+    }
+  
+    .footerBottom {
+      font-size: 0.8rem; /* Reduce footer font size */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sectionWrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .socialIcon + span {
+      margin-left: 10px; /* Space between social icon and text */
+      
+    }
+    .socialIcon{
+      margin-top: 20px;
+    }
+    .sectionHeading {
+      font-size: 1rem;
+      margin: auto;
+      text-align: center; /* Center headings */
+    }
+    #nitlogo{
+      height: 5em;
+      width: 5em;
+      
+    }
+   
+    .contactItem {
+      display: flex;
+      align-items: flex-start;
+      justify-content:safe; /* Centers the icons and text */
+      gap: 10px; /* Keeps space between icon and text */
+      max-width: 300px; /* Ensures a fixed width so items don't stretch too wide */
+      width: 100%; /* Ensures alignment in the center */
+  }
+   .linksList {
+      text-align: center; /* Center the list */
+    }
+  
+    .contactSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Ensures the whole section is centered */
+      text-align: center; /* Centers the text content */
+      gap: 10px; /* Adds space between each item */
+  }
+  
+    .footerBottom {
+      padding: 10px;
+      text-align: center;
+    }
+    
+  
+    .footerBottom .designby {
+      position: static; /* Reset positioning on small screens */
+      text-align: center; /* Center align on smaller screens */
+      font-size: 0.7rem; /* Slightly smaller font size */
+      padding: 0; /* Remove padding on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .teamHeading {
+      font-size: 1.5rem;
+    }
+    .sectionWrapper{
+      gap: 20px;
+    }
+  
+    .linksList a {
+      font-size: 12px;
+    }
+    .nit{
+      margin-left: 1.5rem;
+    }
+  
+    .socialIcons {
+      gap: 25px; /* Increased gap for extra small screens */
+      justify-content: center; /* Center icons */
+    }
+  
+    .socialIcon {
+      font-size: 1.2rem;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .socialIcon + span {
+      margin-left: 20px; /* Added space between social icon and text */
+    }
+  
+    .icon {
+      font-size: 1rem;
+    }
+    #nitlogo{
+      height: 5em;
+      width: 5em;
+      
+    }
+  
+    .section-text {
+      font-size: 0.8rem;
+      text-align: justify; /* Center the text */
+    }
+  
+    .contactSection {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,74 @@
+/* Main container for the loading page */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:  #252134;  /* Dark background for a racing vibe */
+    overflow: hidden;
+}
+
+/* Container for the car and percentage */
+.car-container {
+    display: flex;
+    align-items: center;
+    animation: carMove 10s linear forwards; /* Car moves left to right */
+    justify-content: flex-start;
+    width: 100%;
+    height: 150px;
+}
+
+/* Keyframes for car movement */
+@keyframes carMove {
+    0% {
+        transform: translateX(-100%); /* Start completely off the left */
+    }
+    100% {
+        transform: translateX(60vw); /* End completely off the right */
+    }
+}
+
+/* Percent loading text that moves with the car */
+.loading-percent {
+    font-size: 5rem;
+    font-weight: bold;
+    color: whitesmoke;  /* Transparent white color */
+    position: absolute; /* Use absolute positioning to remove gap */
+    left: -16rem; /* Remove margin-left to eliminate gap */
+    z-index: 1;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    animation: percentMove 10s linear forwards; /* Sync the percentage with car movement */
+}
+
+/* Loading text and animated dots container */
+.loading-text-container {
+    position: absolute;
+    bottom: 15rem;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center;
+}
+
+/* Styling for LOADING text */
+.loading-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffff;
+    text-transform: uppercase;  /* Capital letters */
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .loading-percent {
+        font-size: 3rem;
+    }
+
+    .loading-text, .dots {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+ /* background-image: url("./assets/backgroundimg2.jpeg");*/
+ background-color: #FFF;
+}
+/* App Container to handle the layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the footer is at the bottom */
+}
+
+.content-wrapper {
+  flex: 1; /* Takes up available space pushing the footer down */
+  padding-bottom: 20px; /* Adds spacing between content and footer */
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+ 
+.content-wrapper.fade-in {
+  opacity: 1;
+}
+
+/* Footer Styling for Proper Bottom Positioning */
+footer {
+  margin-top: 20px;
+}
+
+.container {
+  padding-left: 3%;
+  padding-right: 5%;
+}
+
+.btn {
+  background: #FFF;
+  color: #212121;
+  padding: 14px 25px;
+  font-size: 13px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  color: #212121;
+}
+
+/* Media Queries for responsiveness */
+
+/* For screens up to 1200px */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 2%;
+    padding-right: 4%;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 12px;
+  }
+}
+
+/* For screens up to 1000px */
+@media (max-width: 1000px) {
+  .container {
+    padding-left: 1.5%;
+    padding-right: 3%;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+}
+
+/* For screens up to 900px */
+@media (max-width: 900px) {
+  .container {
+    padding-left: 1%;
+    padding-right: 2%;
+  }
+
+  .btn {
+    padding: 8px 18px;
+    font-size: 10px;
+  }
+}
+
+/* For screens up to 600px */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .btn {
+    padding: 6px 15px;
+    font-size: 9px;
+  }
+}
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
